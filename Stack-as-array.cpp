@@ -2,18 +2,23 @@
 
 using namespace std;
 
-int stack[20];
 int top = -1;
+const int max_size = 5;
+int stack[max_size];
 
-void push(int val, int max_size)
+void push(int max_size)
 {
+	int ch;
+
 	if(top == max_size-1)
 		cout<<"\nOVERFLOW !!"<<endl;
 
 	else
 	{
+	    cout<<"\nEnter value to be pushed : ";
+        cin>>ch;
 		top++;
-		stack[top] = val;
+		stack[top] = ch;
 	}
 }
 
@@ -45,7 +50,7 @@ void top_val()
 
 int main()
 {
-	int n, ch;
+	int n;
 
 	do{
 		cout<<"\nChoose from the Operations"<<endl;
@@ -55,9 +60,7 @@ int main()
 		switch(n)
 		{
 			case 1:
-				cout<<"\nEnter value to be pushed : ";
-				cin>>ch;
-				push(ch, 20);
+				push(max_size);
 				break;
 
 			case 2:
