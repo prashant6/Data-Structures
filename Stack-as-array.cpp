@@ -6,7 +6,7 @@ int top = -1;
 const int max_size = 5;
 int stack[max_size];
 
-void push(int max_size)
+void push()
 {
 	int ch;
 
@@ -60,7 +60,7 @@ int main()
 		switch(n)
 		{
 			case 1:
-				push(max_size);
+				push();
 				break;
 
 			case 2:
