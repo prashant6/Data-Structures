@@ -56,7 +56,7 @@ void top_val()
 	if(top == NULL)
 		cout<<"\nList Empty";
 	else
-	cout<<"\nTOP :"<<top->data;
+	cout<<"\nTOP :"<<top->data<<"\n";
 }
 
 int main()
