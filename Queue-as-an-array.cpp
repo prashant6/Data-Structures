@@ -12,7 +12,7 @@ void insert()
 	{
 		front++;
 		rear++;
-        cout<<"\nEnter value to insert : ";
+        	cout<<"\nEnter value to insert : ";
 		cin>>Queue[rear];
 
 	}
@@ -93,7 +93,7 @@ int main()
 			case 4: break;
 
 			default :
-					cout<<"\nEnter proper choice !!"<<endl;
+				cout<<"\nEnter proper choice !!"<<endl;
 
 		}
 	}while(ch != 4);
