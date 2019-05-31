@@ -34,7 +34,6 @@ void push(int val)
 void pop()
 {
 	node * temp;
-	temp = top;
 
 	if (top == NULL)
 		cout<<"\n UNDERFLOW !!";
