@@ -4,3 +4,5 @@ Stack-as-array.o
 Stack-as-array
 Queue-as-an-array.o
 Queue-as-an-array
+Queue-as-linked-list
+Queue-as-linked-list.o
