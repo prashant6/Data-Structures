@@ -17,7 +17,7 @@ void insert()
 
 	}
 
-	else if(rear == max_size)
+	else if(rear == max_size-1)
 	{
 		cout<<"\nOVERFLOW !!"<<endl;
 	}
