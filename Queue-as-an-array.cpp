@@ -8,11 +8,11 @@ int Queue[max_size], front = -1, rear = -1;
 void insert()
 {
 
-	if(rear == -1 && front == -1)
+	if(front == -1)
 	{
 		front++;
 		rear++;
-        	cout<<"\nEnter value to insert : ";
+        cout<<"\nEnter value to insert : ";
 		cin>>Queue[rear];
 
 	}
@@ -35,30 +35,38 @@ void insert()
 void del()
 {
 
-	if(front == -1 || front > rear)
+	if( front == -1 )
 		cout<<"\nUNDERFLOW"<<endl;
 
+	else if(front==rear)
+	{
+		cout<<"\nDeleted Element : "<<Queue[front]<<endl;
+		front=-1;
+		rear=-1;
+	}
 
 	else
 	{
 		cout<<"\nDeleted Element : "<<Queue[front]<<endl;
-		front ++;
+
+		for(int i=0; i<rear; i++)
+		{
+			Queue[i]=Queue[i+1];
+		}
+
+		front=0;
+		rear--;  
 	}
 }
 
 void display()
 {
-	if (front > rear || (front == -1 && rear == -1))
-		{
-			cout<<"Queue's front : NULL"<<endl;
-			cout<<"Queue's rear : NULL"<<endl;
-		}
-
-	else if(front == -1)
+	if (front == -1)
 	{
 		cout<<"Queue's front : NULL"<<endl;
-		cout<<"\nQueue's rear : "<<Queue[rear];
+		cout<<"Queue's rear : NULL"<<endl;
 	}
+
 
 	else
 	{
